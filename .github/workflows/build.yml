@@ -16,6 +16,7 @@ jobs:
       - name: Prep to deploy
         run: |
           rm .gitignore
+          rm .nojekyll
           mkdir pdf
           mv *.pdf pdf/    
 

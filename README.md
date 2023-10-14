@@ -1,2 +1,2 @@
 # cv
-Academic CV (curriculum vitae)
+My academic CV (curriculum vitae)

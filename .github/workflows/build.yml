@@ -4,14 +4,23 @@ jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Git repository
+      - name: Set up repo
         uses: actions/checkout@v3
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
           root_file: cv.tex
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v3
+
+      - name: Prep to deploy
+        run: |
+          rm .gitignore
+          touch .nojekyll
+          mkdir pdf
+          mv *.pdf pdf/          
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          name: PDF
-          path: cv.pdf
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./pdf

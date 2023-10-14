@@ -1,12 +1,13 @@
 \documentclass[10pt,preprint]{aastex}
-%\usepackage[letterpaper, margin=0.5in]{geometry}
+\usepackage[top=1in,right=1in,left=1in]{geometry}
+\usepackage{verbatim}
+\usepackage{hyperref}
+
 \usepackage{savesym}
 \savesymbol{tablenum}
 \usepackage{siunitx}
 \restoresymbol{SIX}{tablenum}
-\usepackage[top=1in,right=1in,left=1in]{geometry}
-\usepackage{verbatim}
-\usepackage{hyperref}
+
 \usepackage[svgnames]{xcolor}
 \definecolor{zz}{RGB}{0,0,255}
 \hypersetup{
@@ -19,8 +20,6 @@
 \newcommand{\jj}[1]{\textcolor{red}{#1}}
 
 \urlstyle{same}
-
-\usepackage{siunitx}
 
 \newcommand*{\xdash}[1][3em]{\rule[0.5ex]{#1}{0.7pt}}
 
